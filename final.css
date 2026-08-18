@@ -1,0 +1,346 @@
+/* style sheet for personal webpage */
+
+/* -----------------------------------------------------   Global elements */
+
+button {
+    cursor: pointer;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+/* -----------------------------------------------------   Header elements */
+
+.nav_header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 4;
+
+    display: flex;
+    align-items: center;
+
+    height: 75px;
+    width: 100%;
+
+    margin: 0px;
+
+    background-color: gainsboro;
+
+    font-size: 16px;
+    font-family: 'Verdana ', sans-serif;
+
+    justify-content: space-between;
+}
+
+.header {
+    font-size: clamp(16px, 3vw, 64px);
+    color: #ad5996; 
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.subheader {
+    font-size: clamp(16px, 3vw, 32px);
+    color: black;
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.logo {
+
+    color: gray;
+    margin-left: 60px;
+    font-size: 24px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.nav_link {
+    color: gray;
+    margin-left: 60px;
+    font-size: 24px;
+
+    cursor: pointer;
+
+    text-decoration: none;
+}
+
+.nav_link:hover {
+    color: black;
+}
+
+.nav_link_current {
+    color: #ad5996;
+    margin-left: 60px;
+    font-size: 24px;
+
+    text-decoration: none;
+    cursor: default;
+}
+
+.nav_options {
+    margin-right: 20px;
+
+    display: flex;
+    gap: 15px;
+
+    color: gray;
+
+    cursor: pointer;
+}
+
+
+/* -----------------------------------------------------   Fixed position elements */
+
+.blob {
+
+    position: absolute;
+    top: 1;
+    right: 0;
+    z-index: 1;
+
+    max-width: 45vw;
+}
+
+/* -----------------------------------------------------   Multi-page elements */
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+
+}
+.content {
+    flex-wrap: wrap;
+
+    display: flex; 
+    flex-direction: row;
+    gap: 15px; 
+    justify-content: space-evenly;
+
+}
+
+.card {
+    height: 450px;
+    width: 300px;
+    box-shadow: 0px 0px 8px gainsboro;
+
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 10px;
+
+    text-decoration: none;
+    color: black;
+}
+
+.card_image {
+    height: 300px;
+    border-radius: 10px;
+    margin-top: 10px;
+
+}
+
+.card_title {
+    margin-bottom: 0px;
+}
+
+
+
+/* -----------------------------------------------------   Page Content Elements */
+
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    position: relative;
+    z-index: 2;
+    width: fit-content;
+
+    padding-top: 10px; 
+
+    margin-left: 50px;
+
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.hello {
+
+    margin-bottom: 0px;
+    margin-top: 10px;
+    color: black;
+
+    font-size: 7vw;
+    font-size: clamp(32px, 7vw, 98px);
+}
+
+.my_name {
+
+    margin-top: 0px;
+    margin-bottom: 20px;
+    color: #ad5996;
+
+    font-size: clamp(32px, 5vw, 74px);
+}
+
+.my_title {
+
+    color: #ad5996;
+    font-size: clamp(24px, 2.5vw, 64px);
+    margin-bottom: 0;
+}
+
+.blurb {
+
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    color: gray;
+
+    max-width: 50%;
+    
+    font-size: 24px;
+    font-family: 'Verdana  ', sans-serif;
+}
+
+.link_button {
+    margin-top: 20px;
+
+    border-radius: 10px;
+    padding: 10px;
+    width: 90px;
+    border: 1px solid #ad5996;
+}
+
+.button_wrapper {
+    width: fit-content;
+}
+
+.content_resume {
+    display: grid;
+    grid-template-columns: 0.75fr 1fr;
+
+    margin-left: 50px;
+    justify-content: center;
+}
+
+.subheader_resume {
+    font-family: 'Verdana  ', sans-serif;
+    color: grey;
+    font-weight: 200;
+    font-size: clamp(16px, 2vw, 32px);
+    margin-top: 0;
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid gray;
+}
+
+.col_1_resume {
+    width: 100%;
+}
+.col_1_resume {
+    width: 100%;
+}
+
+
+.job_loc {
+    font-family: 'Verdana  ', sans-serif;
+    color: black;
+
+    margin-bottom: 0;
+}
+
+.job_title {
+
+    font-family: 'Verdana  ', sans-serif;
+    color: #ad5996;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.job_resp {
+    font-family: 'Verdana  ', sans-serif;
+}
+
+
+@media screen and (max-width: 900px) {
+    .logo {
+        font-size: 16px;
+    }
+
+    .card {
+        height: 400px;
+    }
+
+    .card_image {
+        height: 250px;
+    }
+
+    .blurb {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+  
+    .logo {
+        margin-left: 25px;
+        font-size: 14px;
+    }
+
+    .introduction {
+        margin-left: 20px;
+    }
+
+    .my_title {
+        font-size: 16px;
+    }
+
+    .blurb {
+        font-size: 16px;
+    }
+
+    .card {
+        height: 300px;
+    }
+
+    .card_image {
+        height: 150px;
+    }
+
+    .nav_link {
+        font-size: 16px;
+    }
+
+    .nav_link_current {
+        font-size: 16px;
+    }
+
+    .content_resume {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
